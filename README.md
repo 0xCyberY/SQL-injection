@@ -4,7 +4,7 @@
 **Retrieving hidden data**
 
 [1.Lab: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data](https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data)
-As Kanye West said:
 
-> We're living the future so
-> the present is our past.
+Solutions:
+> *We're living the future so
+> *the present is our past.
