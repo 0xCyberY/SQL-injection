@@ -19,5 +19,10 @@
    1. `""OR+1=1--`
    1. `)*OR+1=1--`
    
+**Subverting application logic**
+[2.Lab: SQL injection vulnerability allowing login bypass](https://portswigger.net/web-security/sql-injection/lab-login-bypass)
+
+1. Solutions
+
   
 
