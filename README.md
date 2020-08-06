@@ -1,5 +1,5 @@
 # SQL-injection
-# Port Swigger SQL injection Lab Solutions <https://portswigger.net/web-security>
+# Port Swigger SQL injection Lab Solutions <tag>
 
 **Retrieving hidden data**
 
