@@ -24,6 +24,7 @@
 [2.Lab: SQL injection vulnerability allowing login bypass](https://portswigger.net/web-security/sql-injection/lab-login-bypass)
 
 1. *Solutions*
+   1. username : `administrator'--` password : `''`
    1. `a'OR+1=1--`
   
 
