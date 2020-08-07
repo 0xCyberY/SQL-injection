@@ -32,5 +32,8 @@
 [3.Lab: SQL injection UNION attack, determining the number of columns returned by the query](https://portswigger.net/web-security/sql-injection/union-attacks/lab-determine-number-of-columns)
 
 1. *Solutions*
+   >The first step of such an attack is to determine the number of columns that are being returned by the query.
+   >The server will responed for `'ORDER+BY+1--` `'ORDER+BY+2--` `'ORDER+BY+3--` that mean there are 3 columns in the database.
+   
 
 
