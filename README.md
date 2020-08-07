@@ -27,4 +27,10 @@
    1. username : `administrator'--` password : `''`
    1. username :`a'OR+1=1--`        password : `''`
   
+<h3>- Retrieving data from other database tables</h3>
+
+[3.Lab: SQL injection UNION attack, determining the number of columns returned by the query](https://portswigger.net/web-security/sql-injection/union-attacks/lab-determine-number-of-columns)
+
+1. *Solutions*
+
 
