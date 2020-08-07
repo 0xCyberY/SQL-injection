@@ -36,6 +36,8 @@
    >The server will responed for `'ORDER+BY+1--` `'ORDER+BY+2--` `'ORDER+BY+3--` that mean there are 3 columns in the database.
    
    1. `'+UNION+SELECT+NULL,NULL,NULL-- `
+   1. `'UNION+SELECT+NULL,NULL,NULL--`
+   1. `'union+select+null,null,null--`
    
    
 
