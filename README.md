@@ -1,5 +1,5 @@
 # SQL-injection
-# Port Swigger SQL injection Lab Solutions <tag>
+# Port Swigger SQL injection Labs Solutions <tag>
 
 <h3>- Retrieving hidden data</h3>
 
@@ -24,6 +24,6 @@
 [2.Lab: SQL injection vulnerability allowing login bypass](https://portswigger.net/web-security/sql-injection/lab-login-bypass)
 
 1. *Solutions*
-
+   1. `a'OR+1=1--`
   
 
