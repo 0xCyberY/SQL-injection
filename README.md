@@ -39,6 +39,10 @@
    1. `'UNION+SELECT+NULL,NULL,NULL--`
    1. `'union+select+null,null,null--`
    
-   
+[4.Lab: SQL injection UNION attack, finding a column containing text](https://portswigger.net/web-security/sql-injection/union-attacks/lab-find-column-containing-text)
+
+1. *Solutions*
+   1. 
+
 
 
