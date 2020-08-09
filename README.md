@@ -55,11 +55,11 @@
 
 1. *Solutions*
 
-  By appling `'+UNION+SELECT+NULL,NULL--` we can say the database has tow columns.
-  By appling `'+UNION+SELECT+'abc','xyz'--` we can say the columns have string values.
+  By applying `'+UNION+SELECT+NULL,NULL--` we can say the database has tow columns.
+  By applying `'+UNION+SELECT+'abc','xyz'--` we can say the columns have string values.
   To retrieve the contents of the users table we can use the following payload
    `'+UNION+SELECT+username,+password+FROM+users--`
-  where `username` is the name of first column ,`password` is the name of second column and `users` is the name of the table in the database
+  where `username` is the name of first column ,`password` is the name of second column and `users` is the name of the table in the database.
   
    __Example__
    
@@ -72,3 +72,19 @@ Content in the first column | Content in the second column
 
  Now to solve the challenge go to Response in Burp Suite from raw search for `administrator` and its password `bp6w7q9023goawolzuyh`
 
+[6.Lab: SQL injection UNION attack, retrieving multiple values in a single column](https://portswigger.net/web-security/sql-injection/union-attacks/lab-retrieve-multiple-values-in-single-column)
+
+1. *Solutions*
+
+   By applying `'+UNION+SELECT+NULL,NULL--` we can say the database has tow columns.
+   By applying `'+UNION+SELECT+NULL,'abc'--` we can ay the second column has string values.
+   Now to retrieve data from only one column we can use the following payload
+   `'+UNION+SELECT+NULL,username||'~'||password+FROM+users-- `
+   ||'~'|| will join `username and password` like  administrator~wet39rb7kc6kt99lq0o6
+   
+ Now to solve the challenge go to Response in Burp Suite and get the username~password `administrator~wet39rb7kc6kt99lq0o6`
+ 
+ 
+ 
+   
+   
