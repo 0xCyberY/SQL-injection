@@ -92,7 +92,7 @@ Content in the first column | Content in the second column
  
 1. *Solutions*
 
-   On Oracle databases, every SELECT statement must specify a table to select FROM. If your UNION SELECT attack does not query from a table, you will still need to include the FROM keyword followed by a valid table name.
+On Oracle databases, every SELECT statement must specify a table to select FROM. If your UNION SELECT attack does not query from a table, you will still need to include the FROM keyword followed by a valid table name.
 
 There is a built-in table on Oracle called DUAL which you can use for this purpose. For example: UNION SELECT 'abc' FROM DUAL 
 
@@ -123,6 +123,7 @@ There is a built-in table on Oracle called DUAL which you can use for this purpo
    the payload will be like:
    
    `'+UNION+SELECT+@@version,NULL+FROM+DUAL#`
+   
    `'+UNION+SELECT+NULL,@@version+FROM+DUAL#`
    
    
